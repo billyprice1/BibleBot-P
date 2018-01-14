@@ -236,8 +236,8 @@ bot.on("message", (raw) => {
 
             let response = language.rawobj.biblebot;
             response = response.replace(
-                " v<biblebotversion>", "-P0 v" + process.env.npm_package_version);
-            response = response.replce(
+                "BibleBot v<biblebotversion>", "BibleBot-P0 v" + process.env.npm_package_version);
+            response = response.replace(
                 "https://git.vypr.space/BibleBot/BibleBot", "https://git.vypr.space/BibleBot/BibleBot-P");
             response = response.replace(
                 "<setversion>", language.rawobj.commands.setversion);
