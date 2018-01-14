@@ -16,7 +16,7 @@ bot.on("ready", () => {
         status: "online",
         afk: false,
         game: {
-            "name": "BibleBot v" + process.env.npm_package_version,
+            "name": "BibleBot-P0 v" + process.env.npm_package_version,
             "url": "https://biblebot.vypr.space"
         }
     });
@@ -189,21 +189,6 @@ bot.on("message", (raw) => {
                 .catch(msg => central.logMessage("info", sender, source, msg));
             channel.send(msg.replaceAll("+" +
                 language.rawobj.commands.puppet + " ", ""));
-        } else if (msg.startsWith("+eval") && sender == config.owner) {
-            try {
-                central.logMessage("info", sender, source, "+eval");
-
-                let argument = msg.replace("+eval ", "");
-
-                if (argument.indexOf("bot.token") > -1) {
-                    throw "I refuse to process anything with bot.token for " +
-                        "the sake of bot security."
-                }
-
-                channel.send(eval(argument));
-            } catch (e) {
-                channel.send("[error] " + e);
-            }
         } else if (msg == "+" + language.rawobj.commands.allusers) {
             let users = bot.users;
             let processed = 0;
@@ -251,7 +236,9 @@ bot.on("message", (raw) => {
 
             let response = language.rawobj.biblebot;
             response = response.replace(
-                "<biblebotversion>", process.env.npm_package_version);
+                " v<biblebotversion>", "-P0 v" + process.env.npm_package_version);
+            response = response.replce(
+                "https://git.vypr.space/BibleBot/BibleBot", "https://git.vypr.space/BibleBot/BibleBot-P");
             response = response.replace(
                 "<setversion>", language.rawobj.commands.setversion);
             response = response.replace(
@@ -1187,6 +1174,6 @@ bot.on("message", (raw) => {
 
 
 central.logMessage(
-    "info", "global", "global", "BibleBot v" + process.env.npm_package_version +
+    "info", "global", "global", "BibleBot-P0 v" + process.env.npm_package_version +
     " by Elliott Pardee (vypr)");
 bot.login(config.token);

@@ -1,7 +1,7 @@
 {
-  "name": "biblebot",
+  "name": "biblebotp",
   "version": "4.2.6",
-  "description": "A Discord bot for Bible verses.",
+  "description": "A template for custom BibleBot instances.",
   "main": "start.js",
   "scripts": {
     "build": "babel src -d build",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.vypr.space/BibleBot/BibleBot"
+    "url": "git+https://git.vypr.space/BibleBot/BibleBot-P"
   },
   "author": "vypr",
   "license": "MIT",
   "bugs": {
-    "url": "https://git.vypr.space/BibleBot/BibleBot/issues"
+    "url": "https://git.vypr.space/BibleBot/BibleBot-P/issues"
   },
   "homepage": "https://biblebot.vypr.space",
   "dependencies": {
