@@ -17,7 +17,8 @@ bot.on("ready", () => {
         afk: false,
         game: {
             "name": "BibleBot-P0 v" + process.env.npm_package_version,
-            "url": "https://biblebot.vypr.space"
+            "url": "https://biblebot.vypr.space",
+            "streaming": false
         }
     });
 });
@@ -848,7 +849,7 @@ bot.on("message", (raw) => {
                         if ((spaceSplit[i - 1] == "Greek")) {
                                 spaceSplit[i] = spaceSplit[i - 1] + temp;
                         } else {
-                            continue;
+                            spaceSplit[i] = "Esther";
                         }
                         break;
                     case "Jeremiah":
@@ -857,7 +858,7 @@ bot.on("message", (raw) => {
                         if (isLetter) {
                             spaceSplit[i] = "LetterOfJeremiah";
                         } else {
-                            continue;
+                            spaceSplit[i] = "Jeremiah";
                         }
                         break;
                     case "Dragon":
