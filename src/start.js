@@ -16,7 +16,7 @@ bot.on("ready", () => {
         status: "online",
         afk: false,
         game: {
-            "name": "BibleBot-P0 v" + process.env.npm_package_version,
+            "name": "BibleBot-P1 v" + process.env.npm_package_version,
             "url": "https://biblebot.vypr.space",
             "streaming": false
         }
@@ -237,7 +237,7 @@ bot.on("message", (raw) => {
 
             let response = language.rawobj.biblebot;
             response = response.replace(
-                "BibleBot v<biblebotversion>", "BibleBot-P0 v" + process.env.npm_package_version);
+                "BibleBot v<biblebotversion>", config.name + " v" + process.env.npm_package_version);
             response = response.replace(
                 "https://git.vypr.space/BibleBot/BibleBot", "https://git.vypr.space/BibleBot/BibleBot-P");
             response = response.replace(
