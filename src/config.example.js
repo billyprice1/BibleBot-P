@@ -1,6 +1,6 @@
 // rename to config.js
 export default {
-    // owner's username + discriminator
+    // owner's ID
     owner: "",
 
     // API token
