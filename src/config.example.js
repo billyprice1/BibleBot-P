@@ -9,6 +9,12 @@ export default {
     // bot's username + discriminator
     botname: "",
 
+    // name of the bot
+    name: "",
+
+    // instance identifier
+    instance: "BibleBot-P#",
+
     // username + discriminator of various version adders (optional)
     versionAdders: [],
 
